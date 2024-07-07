@@ -20,6 +20,19 @@
       "path": "@commitlint/zc-commitlint"
     }
   },
+  "husky": {
+      "hooks": {
+        "pre-commit": "lint-staged", 
+        "pre-push": "npm run test", 
+        "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+      }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
   "devDependencies": {
     "@babel/core": "^7.24.7",
     "@babel/preset-env": "^7.24.7",
