@@ -10,7 +10,8 @@
     "build": "npx rollup -c rollup.config.js",
     "lint": "eslint src/**",
     "cz": "git-cz",
-    "prepare": "husky && husky install"
+    "prepare": "husky && husky install",
+    "release": "standard-version"
   },
   "keywords": [],
   "author": "qinll",
